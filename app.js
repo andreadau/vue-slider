@@ -12,14 +12,13 @@ let vm = new Vue({
     methods: {
         next(){
             this.counter ++;
-            if (this.counter === this.images.length){
+            if (this.counter > this.images.length -1){
                 this.counter = 0;
             }
         },
         prev(){
-            if (this.counter > 0){
-                this.counter --;
-            }else {
+            this.counter --;
+            if (this.counter < 0){
                 this.counter = this.images.length -1;
             }
         }
