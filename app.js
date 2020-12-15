@@ -9,6 +9,11 @@ let vm = new Vue({
             "https://static.photocdn.pt/images/articles/2017/04/28/iStock-546424192.jpg",
         ]
     },
+    //BONUS
+    created: function() {
+        setInterval(this.next,3000);
+    },
+    // 
     methods: {
         next(){
             this.counter ++;
